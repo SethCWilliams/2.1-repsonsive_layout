@@ -1,0 +1,10 @@
+.box
+
+
+.box{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 2px solid gray;
+    box-sizing: border-box;
+}
