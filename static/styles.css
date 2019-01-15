@@ -1,8 +1,4 @@
-@media (min-width: 560px){
-    body {
-        background-color: #DF744A;
-    }
-}
+
 
 * {
     box-sizing: border-box;
@@ -11,11 +7,6 @@
     margin: 0;
 }
 
-@media (min-width: 560px;){
-    .logo {
-        width: 100%;
-    }
-}
 
 body {
     background-color: #BFD8D2;
@@ -88,4 +79,8 @@ h5  {
 
 .width {
     width: 100%;
+}
+@media (min-width: 560px){
+    img {
+        width: 20%; display: inline;}
 }
