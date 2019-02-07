@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import request
 import requests
+import json
 
 
 app = Flask(__name__)
@@ -13,6 +14,14 @@ def index():
     data = response.json()
 
     print(data)
+    etsy_listings = data['results']
+
+    photos = []
+
+    for etsy_listing in etsy_listings:
+        # photos.append(
+
+        print(etsy_listing['Images'])
 
 
 
@@ -22,12 +31,10 @@ def index():
 
 
 
+# This gets the html and renders it to the screen.
+    index_file = open('index.html', 'r')
+    index_html = index_file.read()
+    # index_html = index_html.replace('{{planet_list}}', planet_html)
+    index_file.close()
 
-
-#This gets the html and renders it to the screen.
-# index_file = open('index.html', 'r')
-#     index_html = index_file.read()
-#     index_html = index_html.replace('{{planet_list}}', planet_html)
-#     index_file.close()
-#
-#     return index_html
+    return index_html
